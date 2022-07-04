@@ -134,9 +134,15 @@
     .nav{
         padding: 1em 7em;
         text-decoration-line: none;
-        border-bottom: solid 2px rgb(255, 74, 42);
         color: white;
         margin-right: 1.5em;
+    }
+    .nav:nth-child(even){
+        border-bottom: solid 1px tomato;
+    }
+
+    .nav:last-child{
+        border-top: solid 1px tomato;
     }
     .nav:first-child{
         margin-left: 10%;
@@ -180,24 +186,34 @@
     }
     
     .course-head{
-        color: rgb(255, 74, 42);
+        
         text-align: center;
+        background-color: tomato;
+        border-radius: 8px 8px 0 0;
+        padding: 10px;
     }
     
     .front-end{
+        background-image: url(../frontend.jpg);
+        background-size: cover;
+        color:white;
         float: left;
         width: 30%;
-
+        border: 0.5px solid tomato;
+        border-radius: 10px;
+        margin-bottom: 1em;
     }
     
     .back-end{
+        color: white;
         float: right;
         width: 30%;
-
+        border: 0.5px solid tomato;
+        border-radius: 10px;
     }
     
     .enrolled-students{
-        
+        color: black;
         border: none;
         font-size: 3em;
         margin: 0.2em;
@@ -210,8 +226,9 @@
     }
     
     #enrolled-students{
-        font-size: large;
-        color: black;
+        font-size: xxx-large;
+        color: #333;
+        text-align: center;
         font-weight: lighter;
     }
     
@@ -226,6 +243,7 @@
     }
     
     .para{
+        padding: 1em;
         color: black;
     }
     
@@ -391,12 +409,19 @@
         width: 100%;
         display: block;
         padding: 1.5em;
-        border-bottom: solid 1px tomato;
-        background-color: black;
+        
+        background-color: #333333;
         color: white;
         text-align: center;
         
     
+    }
+    .nav:nth-child(even){
+        border-bottom: solid 1px tomato;
+    }
+
+    .nav:last-child{
+        border-top: solid 1px tomato;
     }
     .nav a{
         margin: 0;
@@ -518,6 +543,8 @@
 
     .enrolled-students{
         margin: 0;
+        text-indent: 0;
+        display: grid;
     }
 
     .row{
@@ -777,6 +804,10 @@
     color: white;
     text-align: justify;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.course a{
+    text-decoration-line: none;
 }
 
 .CourseImage{

@@ -1,6 +1,10 @@
-<?php require 'template/header.php'
+<?php require 'template/header.php';
+if (!isset($_SESSION['email'])) {
+    redirect('login.php');
+}
 ?>
     <main>
+        
         <section class="jambotron">
               <!--  <section class="offer">
                     
@@ -26,23 +30,24 @@
                     <button class="login-btn">Login</button>
                 </section>
             </section>
-                
+            
             <nav class="main-nav" id="navbar">
                     <?php
                     if (isset($_SESSION['email'])) {
                                     ?><a href="profile.php" class="nav">Profile</a><?php
                                 } 
                     ?>
-                    <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
-                    <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
-                    <a href="" class="nav">About us</a>
-                    <?php
+                     <?php
                     if (isset($_SESSION['email'])) {
                                     ?><a href="logout.php" class="nav">Logout</a><?php
                                 } else {?>
                                     <a href="login.php" class="nav">Login</a><?php
                                 }
                     ?>
+                    <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
+                    <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
+                    <a href="" class="nav">About us</a>
+                   
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>
             
@@ -60,7 +65,7 @@
                         culpa
                         excepturi blanditiis. 
                     </p>
-                    <hr><br>
+                    <br>
                 </article>
                 <article class="front-end">
                     <h2 class="course-head"> Front End </h2>
@@ -71,7 +76,10 @@
                         culpa
                         excepturi blanditiis. <a href="courses.php?Category=frontend" class="course-link">Learn More...</a>
                     </p>
-                    <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> enrolled students </span> </h1>
+                    <div class="counter-container">
+                        <div class="counter" data-target="1500" class="enrolled-students" id="enrolled-students"> 724 </div>
+                    </div>
+                    <p>Enrolled Students</p>
                 </article>
                 <article class="back-end">
                     <h2 class="course-head"> Back End </h2>
@@ -82,7 +90,9 @@
                         culpa
                         excepturi blanditiis. <a href="courses.php?Category=backend" class="course-link">Learn More...</a>
                     </p>
-                    <h1 class="enrolled-students"> 584<br> <span id="enrolled-students"> enrolled students </span> </h1>
+                    <div class="counter-container">
+                        <div class="counter" data-target="3000" class="enrolled-students" id="enrolled-students"> 508 </div>
+                    </div>
                 </article>
             </section>
             <br><br><br><br>

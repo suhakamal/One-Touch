@@ -18,6 +18,9 @@ $message="";
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel="icon" type="image/x-icon" href="logo.svg">
     <script src="app/main.js" async> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style2.css">
     <title>MMAD</title>

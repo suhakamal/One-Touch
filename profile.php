@@ -53,7 +53,7 @@ if ($_SESSION['role'] == 1) {?>
                     <h3 class="CourseName"><a href="course.php?id=<?=$row['id']?>"><?=$row['CourseName']?></a></h3>
                     <p class="CourseDescription"><?= substr($row['Description'],0,50)?></p>
                     <button  class="Buttons">Enroll Course</button>
-                    <button  class="Buttons" class="Commentbtn">Leave a comment</button>
+                    <a href="comments.php"><button  class="Buttons" class="Commentbtn">Leave a comment</button></a>
                 </section>
             <?php }
             }else{
