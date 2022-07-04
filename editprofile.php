@@ -217,10 +217,10 @@ if (isset($_POST) && isset($_POST['send'])) {
                         </div>
                         <span><?= $repeat_Pwd_err; ?></span>
                         <div class="form-group">
-                            <button type="submit" name="send" id="send" class="send-btn">Sign Up</button>
+                            <button type="submit" name="send" id="send" class="send-btn">Save</button>
                             <button type="reset" name="Cancel" id="Cancel" class="send-btn cancel">Cancel</button>
                         </div>
-                        <p class="RegisterPara">Already have an account? <a href="login.php">Login here</a></p>
+                        
                     </form>
                 </div>
             </section>
