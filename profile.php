@@ -25,25 +25,23 @@ if ($_SESSION['role'] == 1) {?>
                    
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>
-    
-    <a href="editprofile.php"><img class="cover" src="html.png" alt="Profile cover" width="100%" height="120px"/></a>
-    <a href="editprofile.php"><img class="profile" src="47.jpg" alt="Profile Image" width="40%" height="120px"/></a>
-    <a href="editprofile.php" class="UserName"><h2 class="UserName">Suha Kamal</h2></a>
-    
-<!--  <?php 
-        $sql = "SELECT * FROM user ";
+                <?php 
+        $sql = "SELECT * FROM user WHERE ID = '$_GET[ID]'";
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0 ){
 
             while($row = mysqli_fetch_assoc($result)){ ?> 
-                <section class="PersonalDetails">
-                    <img class="UserImage" alt="<?=$row['cover']?>" width="100%" height="150px"/>
-                    <img class="UserImage" alt="<?=$row['profile']?>" width="50%" height="150px"/>
-                    <h3 class="UserName"><a><?=$row['FirstName']?><?=$row['LastName']?></a> </h3>
+                <section class="PersonalDetails">    
+    <a href="editprofile.php"><img class="cover" src="cover.png" alt="Profile cover" width="100%" height="120px"/></a>
+    <a href="editprofile.php"><img class="profile" src="profile.jpg" alt="Profile Image" width="40%" height="120px"/></a>
+    <h3 class="UserName"><a href="editprofile.php?ID=<?=$row['ID']?>"> <?=$row['FirstName']?>  <?=$row['LastName']?></a> </h3>
+    
+ 
+               
                 </section>
     <?php }
     }?>
-        -->
+       
     <h1>Inroll Courses</h1>
     
     <section class="row">

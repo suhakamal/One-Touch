@@ -210,6 +210,13 @@ button:hover {
     margin-bottom: 3em;
 }
 
+.edit{
+    margin-left: 14.5em;
+    margin-top: -4em;
+    margin-bottom: 6em;
+    display: block;
+}
+
 .inroll-courses .CourseName a{
     color: #666;
 }
@@ -301,3 +308,26 @@ tr:nth-child(odd){
     width: 100%;
 }
 
+/* teacher page*/
+
+.CoursesLectures{
+    color: white;
+    text-align: center;
+}
+.CoursesLectures a{
+    color: white;
+    text-decoration-line: none;
+}
+.CoursesPage{
+    display: inline-block;
+    padding: 3em;
+    background-color: tomato;
+    border-left: 1px solid white;
+    margin-bottom: 4em;
+}
+
+.LecturesPage{
+    display: inline-block;
+    padding: 3em;
+    background-color: tomato;
+}

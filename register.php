@@ -80,23 +80,26 @@ if (isset($_POST) && isset($_POST['send'])) {
 
         <main>
         <nav class="main-nav" id="navbar">
-                    <?php
-                    if (isset($_SESSION['email'])) {
-                                    ?><a href="profile.php" class="nav">Profile</a><?php
-                                } 
-                    ?>
-                     <?php
-                    if (isset($_SESSION['email'])) {
-                                    ?><a href="logout.php" class="nav">Logout</a><?php
-                                } else {?>
-                                    <a href="login.php" class="nav">Login</a><?php
-                                }
-                    ?>
-                    
-                    <a href="" class="nav">About us</a>
-                   
-                    <a onclick="CloseMenu()" class="nav">Close</a>
-                </nav>
+        <?php
+        if (isset($_SESSION['email'])) {
+        ?><a href="profile.php" class="nav">Profile</a><?php
+                                                    }
+                                                        ?>
+    
+                                                        <?php
+        if (isset($_SESSION['email'])) {
+        ?><a href="logout.php" class="nav">Logout</a><?php
+                                                    } else { ?>
+            <a href="login.php" class="nav">Login</a><?php
+                                                    }
+                                                        ?>
+                                                        <a href="" class="nav">About us</a>
+        <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
+        <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
+       
+        
+        <a onclick="CloseMenu()" class="nav">Close</a>
+    </nav>
             <section class="container">
                 <h1 class="section-header">Sign In to OneTouch</h1>
                 <span><?=$success; ?></span><span><?=$faild; ?></span>

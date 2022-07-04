@@ -34,7 +34,7 @@ if (isset($_POST) && isset($_POST['send'])) {
         $comment = $_POST['comment'];
         if(empty($comment))
         {
-            $comment_err = "Please enter your comments";
+            $comment_err = "Ooh no, you didn't insert you comment";
         }
 
 
@@ -46,7 +46,6 @@ if (isset($_POST) && isset($_POST['send'])) {
                 header("Location: index.php");
                 exit;
             } else {
-                print($sql);
                 $faild = "Faild to insert" .  mysqli_connect_error();
             }
         }
@@ -65,16 +64,17 @@ if (isset($_POST) && isset($_POST['send'])) {
         ?><a href="profile.php" class="nav">Profile</a><?php
                                                     }
                                                         ?>
-        <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
-        <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
-        <a href="" class="nav">About us</a>
-        <?php
+                                                        <?php
         if (isset($_SESSION['email'])) {
         ?><a href="logout.php" class="nav">Logout</a><?php
                                                     } else { ?>
             <a href="login.php" class="nav">Login</a><?php
                                                     }
                                                         ?>
+        <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
+        <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
+        <a href="" class="nav">About us</a>
+        
         <a onclick="CloseMenu()" class="nav">Close</a>
     </nav>
     <section class="container">
