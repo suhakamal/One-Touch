@@ -7,16 +7,22 @@ if (!isset($_SESSION['email'])) {
 if ($_SESSION['role'] == 1) {?>
     <main class="inroll-courses">
     <nav class="main-nav" id="navbar">
-                    <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
-                    <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
-                    <a href="" class="nav">About us</a>
                     <?php
+                    if (isset($_SESSION['email'])) {
+                                    ?><a href="profile.php" class="nav">Profile</a><?php
+                                } 
+                    ?>
+                     <?php
                     if (isset($_SESSION['email'])) {
                                     ?><a href="logout.php" class="nav">Logout</a><?php
                                 } else {?>
                                     <a href="login.php" class="nav">Login</a><?php
                                 }
                     ?>
+                    <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
+                    <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
+                    <a href="" class="nav">About us</a>
+                   
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>
     

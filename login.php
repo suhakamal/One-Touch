@@ -77,13 +77,12 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['role'])) {
 
     
         <main>
-            <nav class="main-nav" id="navbar">
-                        <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
-                        <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
-                        <a href="" class="nav">About us</a>
-                        <a href="login.php" class="nav">Login</a>
-                        <a onclick="CloseMenu()" class="nav">Close</a>
-            </nav>
+        <nav class="main-nav" id="navbar">
+                   
+                    <a href="" class="nav">About us</a>
+                   
+                    <a onclick="CloseMenu()" class="nav">Close</a>
+                </nav>
             <section class="container">
                 <h1 class="section-header">OneTouch Login</h1>
                 <?php
