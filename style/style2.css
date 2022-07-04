@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    /*   font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-fg-default);*/
+}
+
+.main-nav{
+    display: none;
+}
+.header {
+    width: 100%;
+    display: block;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    /* margin-bottom: 2em;*/
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    padding: 2em 1em;
+    display: block;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: -0.5px;
+    margin-top: 1em;
+}
+.form-register {
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 1em;
+    border: 1px solid hsl(210deg 18% 87%);
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f6f8fa;
+}
+
+.form-group{
+    padding: 1em;
+    padding-bottom: 0.5em;
+}
+
+.form-control{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    /*margin-top: 10px;*/
+}
+
+.section-header {
+    text-align: center;
+    font-weight: 700 !important;
+    /*font-weight: 600;*/
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+    color: tomato;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    height: 38px;
+    padding: 6px 10px;
+    /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: #fff;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: left;
+}
+
+textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid tomato;
+    outline: 0;
+    
+}
+
+label,
+legend {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    color: tomato;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+label>.label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+}
+
+.send-btn{
+    color: #333333;
+    width: 100%;
+   padding: 7px;
+   background-color: transparent;
+   border: 1px solid tomato;
+   border-radius: 4px;
+   margin-bottom: 7px;
+}
+ 
+.cancel{
+    background-color: tomato;
+    color: white;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    color: #666;
+}
+
+.LoginPara, .RegisterPara{
+    text-indent: 0;
+    color: #666;
+    font-size: small;
+}
+
+.inroll-courses{
+    background-color: #eaeff1;
+}
+
+.inroll-courses h1{
+    font-size: x-large;
+    margin-bottom: 1em;
+    color: black;
+    
+}
+
+ .profile{
+    clear: both;
+    border-radius: 50%;
+    margin-top: -4em;
+    margin-left: 7em;
+}
+
+.UserName{
+    text-decoration-line: none;
+    text-align: center;
+    color: tomato;
+    margin-bottom: 3em;
+}
+
+.inroll-courses .CourseName a{
+    color: #666;
+}
+
+.inroll-courses .course{
+    clear: both;
+    margin-bottom: 2em;
+    background-color: white;
+    border-radius: 8px;
+    padding-bottom: 1em;
+}
+
+
+
+.course .CourseDescription {
+    color: grey;
+}
+
+.Buttons{
+    color: #666;
+    border: 1px solid tomato;
+    padding: 0.7em 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    width: 70%;
+    margin: 1em 15%;
+}
+
+
+ /*teacher page*/
+
+#TeacherPage{
+    background-color: #eaeff1;
+}
+
+.message{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    border: 1px solid tomato;
+    border-left: none;
+    border-right: none;
+    padding: 8px;
+    font-style: italic;
+}
+
+.CourseTableHeading{
+    clear: both;
+    color: tomato;
+    padding: 1em;
+    text-align: center;
+}
+.CoursesTableSection 
+{
+    clear: both; 
+    overflow-x: auto;
+    width: 100%;
+    margin: 0 auto;
+}
+.CoursesTableSection table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin:0 auto;
+    margin-bottom: 2em;
+    border: 1px solid #3333;
+}
+
+th{
+    color: #333333;
+}
+
+td{
+    color: black;
+}
+
+tr:nth-child(odd){
+    background-color: #3333;
+}
+.CoursesTableSection td,th{
+    text-align: left;
+    padding: 12px;
+  
+}
+
+.UpdateSection tr{
+    width: 100%;
+}
+
