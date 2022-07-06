@@ -3,42 +3,41 @@ require 'template/header.php';
 if (!isset($_SESSION['email'])) {
     redirect('login.php');
 }
+
 if(isset($_POST['AddButton'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $sql="INSERT INTO lecture  (LectureName, URL, courseID) VALUES ('$_POST[LectureName]','$_POST[URL]','$_POST[courseID]')";
-        
+        $sql="INSERT INTO course   (CourseName, Description, Category) VALUES ('$_POST[CourseName]','$_POST[Description]','$_POST[Category]')";
         if(mysqli_query($conn,$sql)){
-            $message=" $_POST[LectureName] lecture has been added successfully";
+            $message=" $_POST[CourseName] Course Has Been Added Successfully";
         }
         else{
-            print ($sql);
-            $message="$_POST[LectureName] lecture has not been added successfully";
+            $message="$_POST[CourseName] Course Has not Added Successfully";
         }
         
     }
 }
 if(isset($_POST['UpdateButton'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $sql="UPDATE lecture SET LectureName = '$_POST[LectureName]' , URL='$_POST[URL]' , courseID='$_POST[courseID]' WHERE ID ='$_POST[ID]' ";
+        $sql="UPDATE course SET CourseName = '$_POST[CourseName]' , Description='$_POST[Description]' , Category='$_POST[Category]' WHERE ID ='$_POST[ID]' ";
         if(mysqli_query($conn,$sql)){
-            $message=" $_POST[LectureName] lecture has been updated successfully";
+            $message=" $_POST[CourseName] Course has been updated successfully";
         }
         else{
             print ($sql);
-            $message="$_POST[LectureName] lecture has not been updated successfully";
+            $message="$_POST[CourseName] Course has not updated successfully";
         }
         
     }  
 }
 if(isset($_POST['RemoveButton'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $sql="DELETE FROM lecture WHERE ID = '$_POST[ID]'";
+        $sql="DELETE FROM course WHERE ID = '$_POST[ID]'";
         if(mysqli_query($conn,$sql)){
-            $message=" $_POST[LectureName] lecture has been removed successfully";
+            $message=" $_POST[CourseName] Course Has Been Removed Successfully";
         }
         else{
             print ($sql);
-            $message="$_POST[LectureName] lecture has not been removed successfully";
+            $message="$_POST[CourseName] Course Has not Removed Successfully";
         }
         
     }  
@@ -60,41 +59,43 @@ if(isset($_POST['RemoveButton'])){
                     ?>
                     <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
                     <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
-                    <a href="" class="nav">About us</a>
+                    <a href="aboutus.php" class="nav">About us</a>
                    
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>
-
     <section class="CoursesTableSection">
-    <h4 class="message"><?=$message?></h4>
-    <h2 class="CourseTableHeading">Lectures List</h2>
+    <?php if(!empty($message)){ ?>
+        <h4 class="message"><?=$message?></h4>
+    <?php } ?>
+    
         <?php
-        $sql = "SELECT * FROM lecture";
+        $sql = "SELECT * FROM course";
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0 ){?>
+            <h2 class="CourseTableHeading">Courses List</h2>
             <table>
                     <tr>
                         <th>ID</th>
-                        <th>Lecture Name</th>
-                        <th>URL</th>
-                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
                     </tr>
             <?php while($row = mysqli_fetch_assoc($result)){ ?>
                     <tr>
                         <td><?=$row['ID']?></td>
-                        <td><?=$row['LectureName']?></td>
-                        <td><?=$row['URL']?></td>
-                        <td><?=$row['courseID']?></td>
+                        <td><a href="course.php?ID=<?=$row['ID']?>&desc=<?=$row['Description']?>&course=<?=$row['CourseName']?>"><?=$row['CourseName']?></td>
+                        <td><?=$row['Description']?></td>
+                        <td><?=$row['Category']?></td>
                     </tr>
            
             <?php }
             }else{
-                $message="Please add lectures to view";
+                echo "Please Add Courses to view";
             }?>
              </table>
     </section>
 
-    <section class="AdmissionSection">
+    <section class="UpdateSection">
     <h2 class="CourseTableHeading">Update Section</h2>
     <form action="" method="POST">
                         <div class="form-group">
@@ -102,16 +103,16 @@ if(isset($_POST['RemoveButton'])){
                             <input type="text" name="ID" id="ID" class="form-control" placeholder="Only Require On Update and Remove"  />
                         </div>
                         <div class="form-group">
-                            <label for="LectureName">Lecture Name</label>
-                            <input type="text" name="LectureName" id="LectureName"  class="form-control" placeholder="Enter Lecture Name" required />
+                            <label for="CourseName">Course Name</label>
+                            <input type="text" name="CourseName" id="CourseName"  class="form-control" placeholder="Enter Course Name" required />
                         </div>
                         <div class="form-group">
-                            <label for="URL">URL</label>
-                            <input type="text" name="URL" id="URL"   class="form-control" placeholder="URL" required  />
+                            <label for="Description">Description</label>
+                            <input type="text" name="Description" id="Description"   class="form-control" placeholder="Description" required  />
                         </div>
                         <div class="form-group">
-                            <label for="courseID">Course ID</label>
-                            <input type="text" name="courseID" id="courseID"   class="form-control" placeholder="course ID"  required />
+                            <label for="Category">Category</label>
+                            <input type="text" name="Category" id="Category"   class="form-control" placeholder="Category"  required />
                         </div>
                         <div class="form-group">
                             <button type="submit" name="AddButton" id="send" value="Add" class="send-btn">Add</button>
@@ -122,5 +123,5 @@ if(isset($_POST['RemoveButton'])){
                         
                     </form>
     <section>
-</main>
-<?php require 'template/footer.php' ?>
+    </main>
+    <?php require 'template/footer.php' ?>

@@ -46,7 +46,7 @@ if (!isset($_SESSION['email'])) {
                     ?>
                     <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
                     <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
-                    <a href="" class="nav">About us</a>
+                    <a href="aboutus.php" class="nav">About us</a>
                    
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>

@@ -93,7 +93,7 @@ if (isset($_POST) && isset($_POST['send'])) {
             <a href="login.php" class="nav">Login</a><?php
                                                     }
                                                         ?>
-                                                        <a href="" class="nav">About us</a>
+                                                        <a href="aboutus.php" class="nav">About us</a>
         <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
         <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
        
@@ -134,7 +134,7 @@ if (isset($_POST) && isset($_POST['send'])) {
                             <button type="submit" name="send" id="send" class="send-btn">Sign Up</button>
                             <button type="reset" name="Cancel" id="Cancel" class="send-btn cancel">Cancel</button>
                         </div>
-                        <p class="RegisterPara">Already have an account? <a href="login.php">Login here</a></p>
+                        <p class="RegisterPara">Already have an account? <a href="login.php">Login</a></p>
                     </form>
                 </div>
             </section>

@@ -20,7 +20,7 @@ if (!isset($_SESSION['email'])) {
                     ?>
                     <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
                     <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
-                    <a href="" class="nav">About us</a>
+                    <a href="aboutus.php" class="nav">About us</a>
                    
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>
@@ -33,7 +33,7 @@ if (!isset($_SESSION['email'])) {
             while($row = mysqli_fetch_assoc($result)){ ?>
                 <section class="column">
                     <img class="CourseImage" src="102.jpg" alt="<?=$row['CourseName']?>" width="" height="150px"/>
-                    <h3 class="CourseName"><a href="course.php?ID=<?=$row['ID']?>"><?=$row['CourseName']?></a></h3>
+                    <h3 class="CourseName"><a href="course.php?ID=<?=$row['ID']?>&desc=<?=$row['Description']?>&course=<?=$row['CourseName']?>"><?=$row['CourseName']?></a></h3>
                     <p class="CourseDescription"><?= substr($row['Description'],0,50)?></p>
                 </section>
             <?php }

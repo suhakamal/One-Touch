@@ -204,6 +204,7 @@ button:hover {
 }
 
 .UserName{
+    clear: both;
     text-decoration-line: none;
     text-align: center;
     color: tomato;
@@ -211,8 +212,8 @@ button:hover {
 }
 
 .edit{
-    margin-left: 14.5em;
-    margin-top: -4em;
+    margin-left: 15.6em;
+    margin-top: -5em;
     margin-bottom: 6em;
     display: block;
 }
@@ -266,20 +267,20 @@ button:hover {
     font-style: italic;
 }
 
-.CourseTableHeading{
+.CourseTableHeading, .LecturesTableHeading {
     clear: both;
     color: tomato;
     padding: 1em;
     text-align: center;
 }
-.CoursesTableSection 
+.CoursesTableSection , .LecturesTableSection
 {
     clear: both; 
     overflow-x: auto;
     width: 100%;
     margin: 0 auto;
 }
-.CoursesTableSection table{
+.CoursesTableSection table,  .LecturesTableSection table{
     border-collapse: collapse;
     border-spacing: 0;
     margin:0 auto;
@@ -298,7 +299,7 @@ td{
 tr:nth-child(odd){
     background-color: #3333;
 }
-.CoursesTableSection td,th{
+.CoursesTableSection td,th, .LecturesTableSection td,th{
     text-align: left;
     padding: 12px;
   
@@ -331,3 +332,73 @@ tr:nth-child(odd){
     padding: 3em;
     background-color: tomato;
 }
+
+.AboutusPage{
+    
+    background-color: #eaeff1;
+    color: #666;
+}
+
+.AboutusIntro{
+    clear: both;
+    margin-bottom: 2em;
+}
+
+.AboutusPara{
+    margin: 2em;
+}
+
+.OneTouch{
+    color: tomato;
+}
+
+.lastpara{
+    margin: 0;
+}
+
+.AboutusHeading{
+    color: tomato;
+    padding: 1em;
+    text-align: center;
+}
+
+.CeoDetails{
+    margin-top: 0;
+    background-color: white;
+    padding: 3em 0;
+    padding-top: 0;
+    color: white;
+}
+
+.Img{
+    border-radius: 100px;
+    margin: 1em;
+}
+
+.email {
+    margin: 1em;
+}
+
+.alaa{
+    text-align: center;
+    background-color: #009688;;
+    padding: 1em;
+}
+
+.alaa p{
+    text-indent: 0;
+}
+
+
+.suha{
+    text-align: center;
+    background-color: rgb(255, 108, 82,  0.84);
+    padding: 1em;
+}
+
+
+.suha p{
+    text-indent: 0;
+}
+
+

@@ -194,8 +194,6 @@
     }
     
     .front-end{
-        background-image: url(../frontend.jpg);
-        background-size: cover;
         color:white;
         float: left;
         width: 30%;
@@ -358,8 +356,14 @@
         margin: 2em;
         margin-left: 3em;
     }
-    
+    #CoursePage{
+        background-color: #eaeff1;
+        color: #333;
+        
+    }
+
     .course-container h1{
+        clear: both;
         color: tomato;
     }
 
@@ -376,17 +380,21 @@
         text-decoration: none;
         display: block;
         padding-top: 10px;
+        padding-left: 1em;
     }
     
     .lectures{
-        
         padding-left: 10px;
     }
     
+
     .lecture{
         margin-top: 20px;
     }
 
+    .lecture p{
+        padding: 1em;
+    }
     .contact-us p{
         font-size: smaller;
     }
@@ -580,8 +588,8 @@
     }
 
     .column{
-        width: 90%;
-        margin: 0 5%;
+        width: 80%;
+        margin: 0 10%;
         margin-bottom: 2em;
     }
 

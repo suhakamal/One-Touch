@@ -91,7 +91,7 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['role'])) {
             <a href="login.php" class="nav">Login</a><?php
                                                     }
                                                         ?>
-                                                        <a href="" class="nav">About us</a>
+                                                        <a href="aboutus.php" class="nav">About us</a>
         <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
         <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
         
