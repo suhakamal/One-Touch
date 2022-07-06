@@ -9,17 +9,15 @@ require 'template/header.php';
 
 <nav class="main-nav" id="navbar">
     <?php
-    if (!isset($_SESSION['email'])) {
+    if (isset($_SESSION['email'])) {
     ?>
-        <!--<a href="profile.php?id=<?= $_SESSION['id'] ?>" class="nav">Profile</a>-->
-        <a href="../profile.php?id=1" class="nav">Profile</a>
+        <a href="../profile.php" class="nav">Profile</a>
     <?php
     }
     ?>
-    <a href="../courses.php?Category=backend" class="nav">Back-End Course</a>
-    <a href="../courses.php?Category=frontend" class="nav">Front-End Course</a>
+    <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
+    <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
     <a href="" class="nav">About us</a>
-    <a href="addteacher.php" class="nav">Add Teacher</a>
     <?php
     if (isset($_SESSION['email'])) {
     ?><a href="logout.php" class="nav">Logout</a><?php
@@ -36,21 +34,13 @@ require 'template/header.php';
     <a href="../editprofile.php?id=1" class="UserName">
         <h2 class="UserName">Suha Kamal</h2>
     </a>
-    <a href="../allcourses.php">
-        <section class="admin-card">
-            <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> Courses </span> </h1>
-        </section>
-    </a>
-    <a href="../allteacher.php">
+    <section class="admin-card">
+        <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> Courses </span> </h1>
+    </section>
     <section class="admin-card">
         <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> teachers </span> </h1>
     </section>
-    </a>
-    <a href="../allusers.php"> 
     <section class="admin-card">
         <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> users </span> </h1>
     </section>
-    </a>
 </main>
-
-<?php require 'template/footer.php' ?>

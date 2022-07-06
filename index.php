@@ -4,30 +4,31 @@ if (!isset($_SESSION['email'])) {
 }
 ?>
     <main>
-        
-        <section class="jambotron">
-              <!--  <section class="offer">
+        <!--  <section class="offer">
                     
                 </section>-->
+        <section class="jambotron">
+              
                 <section class="jambotron-head">
                     <h1>Ready <br>to Level-Up <br> Your<br> <span>PROGRAMING SKILLS?</span></h1>
                 </section>
                 <section class="reviews">
                     <h2 class="reviews-head"> <span >What Our Students Say?</span></h2>
-                    <article class="review">
+                    
                     
                     <?php
                         $sql = "SELECT * FROM comment ORDER BY ID DESC LIMIT 2";
                         $result = mysqli_query($conn,$sql);
                         if(mysqli_num_rows($result) > 0 ){
                             while($row = mysqli_fetch_assoc($result)){ ?>
-                            <h4 class="review-head"><?= $row['FirstName']?> <?=$row['LastName']?></h4>
-                            <q><?=$row['Comment']?></q>
-                            <hr>
+                            <article class="review">
+                                <h4 class="review-head"><?= $row['FirstName']?> <?=$row['LastName']?></h4>
+                                <q class="comment"><?=$row['Comment']?></q>
+                            </article>
                         <?php }
                     }?>
-                    </article>
-                    <a href="comments.php"><button  class="Buttons" class="Commentbtn">Leave a comment</button></a>
+                    
+                    <a href="comments.php"><button  class="Buttons" id="Commentbtn">Leave a comment</button></a>
                     <button class="login-btn">Login</button>
                 </section>
         </section>

@@ -1,0 +1,862 @@
+#home {
+   /* background-image: url(../47.jpg);*/
+    background-color: #eaeff1;
+    background-size: 100% 42em;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: white;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    padding-bottom: 3em;
+}
+
+.main-header {
+    width: 100%;
+    background-color: black;
+
+}
+
+.logo img {
+    float: left;
+    margin: 0;
+    width: 85px;
+}
+
+
+.search {
+    border-bottom: solid 2px tomato;
+    margin-top: 2em;
+    width: 43%;
+    text-align: center;
+    float: left;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+input placeholder {
+    color: white;
+}
+
+input :focus {
+    outline: none;
+}
+
+
+.jambotron {
+    position: relative;
+    height: 28em;
+    border-radius: 20px;
+    border: none;
+    margin: 0 10%;
+    padding-bottom: 1em;
+}
+
+h1 {
+    margin: 2.5em 0 3em 3em;
+    font-size: 2em;
+    border-right: white 2px solid;
+    padding: 2em 0;
+}
+
+
+span {
+    color: cyan;
+}
+
+.offer {
+    height: 8em;
+}
+
+
+.jambotron-head {
+    float: left;
+    padding: 1em;
+    width: 50%;
+}
+
+.reviews {
+    float: left;
+    padding: 1em;
+    width: 50%;
+}
+
+.reviews a {
+    text-decoration-line: none;
+}
+
+.reviews-head {
+    color: white;
+    text-align: center;
+}
+
+.review-head {
+    font-size: smaller;
+}
+
+
+.login-btn {
+    clear: both;
+    display: block;
+    position: absolute;
+    padding: 1em 5em;
+    top: 28em;
+    left: 67%;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: rgb(255, 74, 42);
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+.login-btn:hover {
+    border-color: transparent;
+    background-color: rgba(255, 108, 82, 0.836);
+    color: white;
+}
+
+.main-nav {
+    clear: both;
+
+}
+
+.nav {
+    padding: 1em 7em;
+    text-decoration-line: none;
+    border-bottom: solid 2px rgb(255, 74, 42);
+    color: white;
+    margin-right: 1.5em;
+}
+
+.nav:first-child {
+    margin-left: 10%;
+}
+
+.nav:last-child {
+    margin-right: 10%;
+}
+
+.nav:hover {
+    border: none;
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    padding: 1em 0em;
+    background-color: rgb(255, 74, 42);
+    border-radius: 0;
+    color: white;
+    border: solid 3px transparent;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+.courses {
+    padding: 5em 0;
+    background-color: white;
+    display: inline-block;
+    padding-bottom: 0;
+    margin: 0 5%;
+}
+
+.web-development {
+    padding-top: 4em;
+    color: black;
+    text-align: center;
+}
+
+.header {
+    color: black;
+}
+
+.course-head {
+    color: rgb(255, 74, 42);
+    text-align: center;
+}
+
+.front-end {
+    float: left;
+    width: 30%;
+
+}
+
+.back-end {
+    float: right;
+    width: 30%;
+
+}
+
+.enrolled-students {
+
+    border: none;
+    font-size: 3em;
+    margin: 0.2em;
+    text-align: center;
+
+}
+
+.courses {
+    color: black;
+}
+
+#enrolled-students {
+    font-size: large;
+    color: black;
+    font-weight: lighter;
+}
+
+.admin-card {
+    background-color: white;
+    border: 1px solid #bacdd8;
+    padding: 8px;
+    border-radius: 12px;
+    margin: 4em 4em 2em 4em;
+    
+}
+
+a:hover {
+    color: red;
+}
+
+p {
+    text-indent: 2em;
+}
+
+.para {
+    color: black;
+}
+
+
+.row {
+    margin: 0 10%;
+}
+
+
+.column {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    border: solid 2px transparent;
+    color: black;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    background-color: white;
+    border: 0;
+}
+
+
+.teacher-photo {
+    float: left;
+    width: 30%;
+    border-radius: 50%;
+    height: 20em;
+    padding: 1em;
+}
+
+.teacher-details {
+    float: right;
+    padding: 2em;
+    padding-right: 4em;
+    margin-top: 2em;
+    width: 50%;
+}
+
+#mid-teacher-details {
+    float: left;
+}
+
+#mid-teacher-photo {
+    float: right;
+}
+
+.teacher-name,
+.courseShortDesc {
+    text-align: justify;
+}
+
+
+
+footer {
+    clear: both;
+    width: 100%;
+    color: black;
+    background-color: white;
+
+    display: inline-block;
+}
+
+.contact-us {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin-left: 5%;
+    padding: 1em;
+}
+
+.contact-us img {
+    padding-top: 1em;
+}
+
+.CopyRigths {
+    font-size: small;
+    margin: 1em 1em;
+    margin-bottom: 0;
+    color: tomato;
+}
+
+
+
+.social-media {
+    float: right;
+    width: 45%;
+    text-align: center;
+    margin: 4em auto;
+    border-left: solid black 1px;
+}
+
+.social-media h4 {
+    margin-top: 1em;
+    color: tomato;
+}
+
+footer ul a {
+    display: block;
+    padding: 8px;
+    color: black;
+    text-align: center;
+
+}
+
+footer ul {
+    padding: 0;
+}
+
+.SiteMap h4 {
+    color: tomato;
+}
+
+.media-icons {
+    width: 30px;
+    cursor: pointer;
+    margin: 2em;
+    margin-left: 3em;
+}
+
+.contact-us p {
+    font-size: smaller;
+}
+
+.contact-icons {
+    display: block;
+    margin-left: 50%;
+}
+
+.course-container {
+    clear: both;
+    margin-top: 7em;
+    /* background-color: aquamarine;*/
+    padding: 1em;
+    padding-top: 17em;
+}
+
+.course-container h1 {
+    color: tomato;
+}
+
+.lec-img {
+
+    width: 100;
+
+    /*width: 250px;
+        height: 50;*/
+    margin-bottom: 1em;
+}
+
+.lectures a {
+    text-decoration: none;
+    display: block;
+    padding-top: 10px;
+}
+
+.lectures {
+
+    padding-left: 10px;
+}
+
+.lecture {
+    margin-top: 20px;
+}
+
+
+
+@media only screen and (max-width: 779px) {
+    #home {
+       /* background-image: url(../47.jpg);*/
+        background-color: #eaeff1;
+        background-size: 100% 20em;
+    }
+
+
+
+    .menuBtn {
+        text-decoration-line: none;
+        color: tomato;
+        float: right;
+        margin: 2.2em 5%;
+        margin-left: 0;
+        background-color: transparent;
+        border: 0;
+        font-size: 1em;
+    }
+
+    .main-nav {
+        padding: 0;
+        border: none;
+        position: absolute;
+        display: none;
+        width: 100%;
+        top: 0;
+
+    }
+
+
+    .nav {
+        padding: 0;
+        width: 100%;
+        display: block;
+        padding: 1.5em;
+        border-bottom: solid 1px tomato;
+        background-color: black;
+        color: white;
+        text-align: center;
+
+
+    }
+
+    .nav a {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .nav:first-child {
+        margin-left: 0;
+    }
+
+    .nav:last-child {
+        border-bottom: none;
+    }
+
+    .search {
+        border-bottom: solid 2px tomato;
+        margin-top: 2em;
+        width: 43%;
+        text-align: center;
+    }
+
+    .overlay {
+        height: 20em;
+    }
+
+    .logo img {
+        margin: 0;
+        margin-left: 5%;
+        float: left;
+    }
+
+
+    input {
+        margin: 0 auto;
+        width: 10em;
+        text-align: center;
+    }
+
+
+    .jambotron {
+        clear: both;
+        position: relative;
+        height: 11em;
+        border-radius: 0px;
+        border: none;
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    h1 {
+        display: inline-block;
+        font-size: larger;
+        border: none;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .jambotron-head {
+        padding: 0em;
+        width: 100%;
+        margin: 2em 0;
+        margin-bottom: 6em;
+    }
+
+    .reviews {
+        clear: both;
+        width: 90%;
+        padding: 1em 0;
+        color: black;
+        background-color: transparent;
+        margin: 0 5%;
+    }
+
+    .reviews-head span {
+        color: black;
+        text-align: center;
+        margin: 0 5%;
+    }
+
+    .review-head {
+        font-size: smaller;
+        color: rgb(252, 122, 99);
+        margin: 0 5%;
+    }
+
+    .review {
+        margin: 0 5%;
+        padding: 0.5em 0;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+
+    .courses {
+        clear: both;
+        padding: 1em;
+        width: 90%;
+    }
+
+    .web-development {
+        text-align: justify;
+        padding-top: 1em;
+    }
+
+
+    .web-development .header {
+        text-align: center;
+    }
+
+    .front-end {
+        width: 100%;
+    }
+
+    .back-end {
+        width: 100%;
+        margin-bottom: 2em;
+
+    }
+
+    .enrolled-students {
+        margin: 0;
+    }
+
+    .row {
+        margin: 0 5%;
+    }
+
+    .column {
+        width: 90%;
+        margin: 0 5%;
+        margin-bottom: 2em;
+    }
+
+    .teacher-photo {
+        width: 100%;
+        border-radius: 0;
+        height: 10em;
+        padding: 0;
+        margin-bottom: 1em;
+    }
+
+    .teacher-name {
+        clear: both;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .teacher-details {
+        float: none;
+        padding: 1em;
+        width: 100%;
+    }
+
+    #mid-teacher-details {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+
+    .media-icons {
+        clear: both;
+        margin: 1em;
+    }
+
+    .icons-template {
+        text-align: center;
+    }
+
+    .contact-us {
+        margin: 0;
+        width: 100%;
+
+    }
+
+    .contact-us h4 {
+        color: rgb(255, 99, 71);
+
+    }
+
+    .contact-us p {
+        margin-top: 8px;
+        text-indent: 0;
+    }
+
+    .contact-icons {
+        margin: 0 auto;
+    }
+
+
+    .social-media {
+        width: 100%;
+        margin: 0;
+        border: none;
+        margin-bottom: 1em;
+        padding: 0;
+        border-bottom: solid 1px black;
+    }
+
+    .contact-us {
+        border-bottom: solid 1px black;
+    }
+
+    .SiteMap {
+        border-bottom: solid 1px black;
+    }
+
+    footer {
+        clear: both;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding-bottom: 1em;
+
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .teacher-photo {
+        border-radius: 4px;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+
+    h1 {
+        margin: 0;
+        font-size: 1.5em;
+        border-right: white 2px solid;
+        margin-top: -1em;
+    }
+
+    .teacher-photo {
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    #mid-teacher-details {
+        float: none;
+    }
+
+    .icons-template {
+        text-align: center;
+        margin: 0.5em;
+    }
+
+}
+
+@media only screen and (min-width: 780px) {
+    body {
+        background-size: 100% 42em;
+    }
+
+    .jambotron {
+        position: relative;
+        height: 28em;
+        border-radius: 20px;
+        border: none;
+        margin: 0 10%;
+        padding-bottom: 1em;
+
+    }
+
+    .jambotron-head {
+        float: left;
+        padding: 2em;
+        width: 50%;
+        margin-top: 1em;
+    }
+
+    .reviews {
+        float: left;
+        padding: 0em;
+        width: 50%;
+    }
+
+    .main-nav {
+
+        clear: both;
+
+        text-align: center;
+    }
+
+    .nav {
+        position: relative;
+        padding: 1em 2em;
+        text-decoration-line: none;
+        border-bottom: solid 2px rgb(255, 74, 42);
+        color: white;
+        margin-right: 1.5em;
+    }
+
+    .login-btn {
+        clear: both;
+        position: static;
+        padding: 0.5em 3em;
+        margin: 2em auto;
+        border-radius: 5px;
+        border: 1px solid tomato;
+        background: transparent;
+    }
+
+    .review-head {
+        color: rgb(255, 99, 71);
+    }
+
+    .courses {
+        padding: 3em 0;
+
+    }
+
+    .web-development {
+        padding-top: 0em;
+    }
+
+    .web-development p {
+        text-indent: 0;
+    }
+
+    .teacher-photo {
+        width: 100%;
+        padding: 0;
+        height: 8em;
+    }
+
+    .teacher-details {
+        clear: both;
+        float: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .row {
+        margin: 2em 5%;
+        margin-top: 1em;
+    }
+
+    .column {
+        width: 30%;
+        padding: 0;
+        margin-right: 2em;
+    }
+
+    .teacher-name {
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    .media-icons {
+        margin: 0.5em;
+        padding: 0;
+        display: inline;
+    }
+
+    .teacher-name .courseShortDesc {
+        text-align: left;
+    }
+
+    .contact-us h4 {
+        color: rgb(255, 99, 71);
+        margin-left: 10%;
+    }
+
+    .social-media {
+        padding: 2em;
+    }
+
+    .column:last-child {
+        margin-right: 0;
+    }
+}
+
+
+/* courses page  */
+#CoursesPage {
+    background-color: #eaeff1;
+    margin: 0;
+
+    color: white;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.CourseImage {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.CourseName {
+    margin: 0;
+    margin-top: 1em;
+}
+
+.CourseName a {
+    margin-left: 1em;
+    text-decoration-line: none;
+    color: tomato;
+
+}
+
+.CourseDescription {
+    margin: 1em;
+    margin-top: 0.5em;
+
+}
