@@ -15,21 +15,22 @@ if (!isset($_SESSION['email'])) {
                 <section class="reviews">
                     <h2 class="reviews-head"> <span >What Our Students Say?</span></h2>
                     <article class="review">
-                        <h4 class="review-head">Alaa Mustafa</h4>
-                        <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis recusandae
-                            corrupti</q>
+                    
+                    <?php
+                        $sql = "SELECT * FROM comment ORDER BY ID DESC LIMIT 2";
+                        $result = mysqli_query($conn,$sql);
+                        if(mysqli_num_rows($result) > 0 ){
+                            while($row = mysqli_fetch_assoc($result)){ ?>
+                            <h4 class="review-head"><?= $row['FirstName']?> <?=$row['LastName']?></h4>
+                            <q><?=$row['Comment']?></q>
                             <hr>
-                    </article>
-                    <article class="review">
-                        <h4 class="review-head">Alaa Mustafa</h4>
-                        <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis recusandae
-                            corrupti</q>
-                            
+                        <?php }
+                    }?>
                     </article>
                     <a href="comments.php"><button  class="Buttons" class="Commentbtn">Leave a comment</button></a>
                     <button class="login-btn">Login</button>
                 </section>
-            </section>
+        </section>
             
             <nav class="main-nav" id="navbar">
                     <?php

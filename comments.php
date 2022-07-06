@@ -3,12 +3,7 @@ require 'template/header.php';
 if (!isset($_SESSION['email'])) {
     redirect('login.php');
 }
-/*session_start();
 
-if (isset($_SESSION['email'] ))  {
-    header('Location: login.php');
-    exit;
-}**/
 
 $first_name = $last_name = $comment = "";
 $first_name_err = $last_name_err = $comment_err = "";
