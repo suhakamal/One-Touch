@@ -2,6 +2,26 @@
 
 ?>
 <main class="AboutusPage">
+<nav class="main-nav" id="navbar">
+            <?php
+            if (isset($_SESSION['email'])) {
+            ?><a href="profile.php" class="nav">Profile</a><?php
+                                                                                }
+                                                                                    ?>
+             <?php
+            if (isset($_SESSION['email'])) {
+            ?><a href="logout.php" class="nav">Logout</a><?php
+                                                                                } else { ?>
+                <a href="login.php" class="nav">Login</a><?php
+                                                                                }
+                                                            ?>
+                                                            <a href="aboutus.php" class="nav">About us</a>
+            <a href="courses.php?Category=backend" class="nav">Back-End Course</a>
+            <a href="courses.php?Category=frontend" class="nav">Front-End Course</a>
+            
+           
+            <a onclick="CloseMenu()" class="nav">Close</a>
+        </nav>
     <section class="AboutusIntro">
         <p class="AboutusPara">Welcome to <span class="OneTouch">OneTouch</span> E-Learning  Platform, your number one source for all web development courses  FrontEnd Courses like HTML, CSS, JavaScript,React JS, JavaScript Data Types, Flutter. BackEnd Courses like PHP, MySQL, Node JS].</p>
         <p class="AboutusPara"> We're dedicated to giving you the very best of courses, with a focus on three characteristics,  Knowing Basics, Practicing in Real Projects and Uniqueness in your Projects.</p>

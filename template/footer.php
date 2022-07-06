@@ -12,7 +12,7 @@
                 <a href="courses.php?Category=frontend">Front End</a>
                 <a href="courses.php?Category=backend">Back End</a>
                 <a href="register.php">Register</a>
-                <a href="">About Us </a>
+                <a href="aboutus.php">About Us </a>
             </ul>
             
         </section>

@@ -77,14 +77,12 @@ if(isset($_POST['RemoveButton'])){
                     <tr>
                         <th>ID</th>
                         <th>Course Name</th>
-                        <th>Description</th>
                         <th>Category</th>
                     </tr>
             <?php while($row = mysqli_fetch_assoc($result)){ ?>
                     <tr>
                         <td><?=$row['ID']?></td>
                         <td><a href="course.php?ID=<?=$row['ID']?>&desc=<?=$row['Description']?>&course=<?=$row['CourseName']?>"><?=$row['CourseName']?></td>
-                        <td><?=$row['Description']?></td>
                         <td><?=$row['Category']?></td>
                     </tr>
            

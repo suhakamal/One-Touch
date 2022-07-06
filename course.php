@@ -65,41 +65,14 @@ if(isset($_POST['RemoveButton'])){
            
             <a onclick="CloseMenu()" class="nav">Close</a>
         </nav>
-        <section class="LecturesTableSection">
-    <?php if(!empty($message)){ ?>
-        <h4 class="message"><?=$message?></h4>
-    <?php } ?>
-    
-    
-        <?php
-        $sql = "SELECT * FROM lecture WHERE courseID = '$_GET[ID]'";
-        $result = mysqli_query($conn,$sql);
-        if(mysqli_num_rows($result) > 0 ){?>
-        <h2 class="LecturesTableHeading">Lectures List</h2>
-            <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Lecture Name</th>
-                        <th>URL</th>
-                        <th>Course ID</th>
-                    </tr>
-            <?php while($row = mysqli_fetch_assoc($result)){ ?>
-                    <tr>
-                        <td><?=$row['ID']?></td>
-                        <td><?=$row['LectureName']?></td>
-                        <td><?=$row['URL']?></td>
-                        <td><?=$row['courseID']?></td>
-                    </tr>
-           
-            <?php }
-            }else{
-                $message="Please add lectures to view";
-            }?>
-             </table>
-    </section>
+        
         <section class="course-container">
             
             <h1><?=$_GET['course']?></h1>
+            <?php if(!empty($message)){ ?>
+        <h4 class="message"><?=$message?></h4>
+    <?php } ?>
+    
             <aside class="lectures">
                 <nav>
 
@@ -108,7 +81,7 @@ if(isset($_POST['RemoveButton'])){
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) { ?>
-                            <a href="course.php?ID=<?=$_GET['ID']?>&url=<?= $row['URL'] ?>"&name=<?= $row['LectureName'] ?>><?= $row['LectureName'] ?></a>
+                            <a href="course.php?ID=<?=$_GET['ID']?>&url=<?= $row['URL'] ?>&course=<?= $_GET['course'] ?>"><?= $row['LectureName'] ?></a>
                     <?php }
                     } else {
                         echo "There is no lectures available for this course  ";
@@ -125,8 +98,31 @@ if(isset($_POST['RemoveButton'])){
                     <?php } ?>
             </section>
             <?php if ($_SESSION['role'] == 2) {?>
+                <section class="LecturesTableSection">
+                
+                
+                    <?php
+        $sql = "SELECT * FROM lecture WHERE courseID = '$_GET[ID]'";
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result) > 0 ){?>
+            <h2 class="LecturesTableHeading">Lectures List</h2>
+            <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Lecture Name</th>
+                        
+                    </tr>
+            <?php while($row = mysqli_fetch_assoc($result)){ ?>
+                    <tr>
+                        <td><?=$row['ID']?></td>
+                        <td><a href="course.php?ID=<?=$row['ID']?>&desc=<?=$row['Description']?>&course=<?=$row['LectureName']?>"><?=$row['LectureName']?></td>
+
+                    </tr>
+           
+            <?php } }?>
+             </table>
                 <section class="AdmissionSection">
-                    <h2 class="CourseTableHeading">Update Section</h2>
+                    <h2 class="LecturesTableHeading">Update Section</h2>
                     <form action="" method="POST">
                         <div class="form-group">
                             <label for="ID">ID</label>
