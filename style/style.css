@@ -49,9 +49,12 @@
         background-color: transparent;
         border: none;
         outline: none;
-        color: white;
+        
     }
     
+    .search input{
+        color: white;
+    }
     input placeholder{
         color: white;
     }

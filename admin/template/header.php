@@ -28,7 +28,7 @@ $message="";
         <div class="">
         <header class="main-header">
 
-                <a href="index.php" class="logo">       
+                <a href="../index.php" class="logo">       
                     <img src="../logo.png" alt="logo"/>
                 </a>
                 <form class="search">
