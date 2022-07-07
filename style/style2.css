@@ -215,6 +215,11 @@ button:hover {
     color: tomato;
     margin-bottom: 3em;
 }
+#mobile{
+    background-color: #eaeff1;
+    padding-bottom: 30em;
+}
+
 
 .edit{
     margin-left: 15.6em;
@@ -243,17 +248,22 @@ button:hover {
 
 .Buttons{
     color: #666;
-    border: 1px solid tomato;
+    border: none;
     padding: 0.7em 8px;
     border-radius: 4px;
     font-weight: 600;
-    background-color: transparent;
+    background-color: rgba(255, 108, 82, 0.836);
     cursor: pointer;
     display: block;
     width: 70%;
     margin: 1em 15%;
+    border-color: rgba(255, 108, 82, 0.836);
 }
+.Buttons:hover{
 
+    border: 1px solid rgba(255, 108, 82, 0.836);
+    
+}
 
  /*teacher page*/
 
@@ -624,6 +634,7 @@ tr:nth-child(odd){
         float: left;
         width: 40%;
     }
+    
     
 
 }

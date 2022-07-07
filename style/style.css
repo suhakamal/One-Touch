@@ -32,6 +32,7 @@
         margin: 3em 10%;
         float: right;
         width: 13%;
+        
     }
 
 
@@ -48,6 +49,7 @@
         background-color: transparent;
         border: none;
         outline: none;
+        color: white;
     }
     
     input placeholder{
@@ -98,12 +100,14 @@
     
     #Commentbtn{
         margin-top: 4em;
+        background-color: tomato;
+        border: 1px solid tomato;
         color: white;
     }
 
     #Commentbtn:hover{
-        border-color: transparent;
-        background-color: rgba(255, 108, 82, 0.836);
+        border-color: rgba(255, 108, 82, 0.836);
+        background-color: transparent;
         color: white;
     }
     .comment{

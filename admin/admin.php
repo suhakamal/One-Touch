@@ -36,19 +36,25 @@ require 'template/header.php';
     <a href="../editprofile.php?id=1" class="UserName">
         <h2 class="UserName">Suha Kamal</h2>
     </a>
-    <a href="../allcourses.php">
+    <a href="allcourses.php">
         <section class="admin-card">
-            <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> Courses </span> </h1>
+        <div class="counter-container">
+            <h1 class="enrolled-students" class="counter"> 375<br> <span id="enrolled-students"> Courses </span> </h1>
+        </div>
         </section>
     </a>
-    <a href="../allteacher.php">
+    <a href="allteacher.php">
     <section class="admin-card">
-        <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> teachers </span> </h1>
+    <div class="counter-container">
+            <h1 class="enrolled-students" class="counter"> 375<br> <span id="enrolled-students"> teachers </span> </h1>
+        </div>
     </section>
     </a>
-    <a href="../allusers.php"> 
+    <a href="allusers.php"> 
     <section class="admin-card">
-        <h1 class="enrolled-students"> 375<br> <span id="enrolled-students"> users </span> </h1>
+    <div class="counter-container">
+            <h1 class="enrolled-students" class="counter"> 375<br> <span id="enrolled-students"> users </span> </h1>
+        </div>
     </section>
     </a>
 </main>

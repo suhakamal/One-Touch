@@ -36,7 +36,7 @@ if(isset($_POST['RemoveButton'])){
             $message=" $_POST[CourseName] Course Has Been Removed Successfully";
         }
         else{
-            print ($sql);
+            
             $message="$_POST[CourseName] Course Has not Removed Successfully";
         }
         

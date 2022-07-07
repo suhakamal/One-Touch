@@ -2,7 +2,44 @@
 require 'template/header.php';
 if (!isset($_SESSION['email'])) {
     redirect('login.php');
-}
+}?>
+
+
+
+
+<section class="row" >
+                            
+<?php
+    if (isset($_GET['search'])) :  $_GET['search']; endif; ?><?php
+    $sql = "SELECT * FROM course WHERE CourseName LIKE '%$_GET[search]%'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result)  ;
+        ?>
+        <section class="row">
+            <?php
+                $sql = "SELECT * FROM course WHERE Category = '$_GET[Category]'";
+                $result = mysqli_query($conn,$sql);
+                if(mysqli_num_rows($result) > 0 ){
+                    while($row = mysqli_fetch_assoc($result)){ ?>
+                        <section class="column">
+                            <img class="CourseImage" src="102.jpg" alt="<?=$row['CourseName']?>" width="" height="150px"/>
+                            <h3 class="CourseName"><a href="course.php?ID=<?=$row['ID']?>&desc=<?=$row['Description']?>&course=<?=$row['CourseName']?>"><?=$row['CourseName']?></a></h3>
+                            <p class="CourseDescription"><?= substr($row['Description'],0,50)?></p>
+                            <?php if ($_SESSION['role'] == 1) {?>
+                            <button  class="Buttons">Enroll Course</button>
+                            <?php } ?>
+                        </section>
+                    <?php }
+                    }else{
+                        echo "0 results";
+                }?>
+             </section>
+            <?php 
+    }
+    ?>
+</section>
+<?php
 
 
 

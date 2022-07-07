@@ -1,4 +1,4 @@
-
+/*
 window.onscroll = function(){
     myfunction()
 };
@@ -11,7 +11,7 @@ function myfunction(){
         NAV.classList.remove("sticky")
     }
 }
-
+*/
 function OpenMenu() {
     document.getElementById("navbar").style.display = "block";
     }
@@ -19,3 +19,11 @@ function OpenMenu() {
 function CloseMenu() {
     document.getElementById("navbar").style.display = "none";
     }
+
+    
+$(document).ready(function(){
+       $(".counter").counterUp({
+           delay: 10,
+           time: 1200
+       });
+   });

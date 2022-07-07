@@ -34,7 +34,7 @@ $message="";
                 <a href="index.php" class="logo">       
                     <img src="logo.png" alt="logo"/>
                 </a>
-                <form class="search">
+                <form class="search" action="search.php" method="get">
                     <input type="search" name="search" placeholder="Search..." />
                 </form>
                 
