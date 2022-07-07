@@ -5,7 +5,7 @@ if (!isset($_SESSION['email'])) {
 }
 ?>
 <main id="CoursesPage">
-<nav class="main-nav" id="navbar">
+<nav class="main-nav" id="navbar" style="display:none;">
                     <?php
                     if (isset($_SESSION['email'])) {
                                     ?><a href="profile.php" class="nav">Profile</a><?php
@@ -35,6 +35,9 @@ if (!isset($_SESSION['email'])) {
                     <img class="CourseImage" src="102.jpg" alt="<?=$row['CourseName']?>" width="" height="150px"/>
                     <h3 class="CourseName"><a href="course.php?ID=<?=$row['ID']?>&desc=<?=$row['Description']?>&course=<?=$row['CourseName']?>"><?=$row['CourseName']?></a></h3>
                     <p class="CourseDescription"><?= substr($row['Description'],0,50)?></p>
+                    <?php if ($_SESSION['role'] == 1) {?>
+                    <button  class="Buttons">Enroll Course</button>
+                    <?php } ?>
                 </section>
             <?php }
             }else{

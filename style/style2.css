@@ -23,13 +23,11 @@ body {
     color: var(--color-fg-default);*/
 }
 
-.main-nav{
-    display: none;
-}
+
 .header {
     width: 100%;
     display: block;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 10px;
     /* margin-bottom: 2em;*/
     text-align: center;
@@ -82,6 +80,13 @@ body {
     line-height: 1.2;
     letter-spacing: -.1rem;
     color: tomato;
+}
+
+.form_text_comment{
+    float: left;
+    width: 100%;
+    height: 7em;
+    margin: 1em 0;
 }
 
 input[type="email"],
@@ -381,7 +386,7 @@ tr:nth-child(odd){
 
 .alaa{
     text-align: center;
-    background-color: #009688;;
+    background-color: #03bdac;
     padding: 1em;
 }
 
@@ -402,3 +407,223 @@ tr:nth-child(odd){
 }
 
 
+@media only screen and (min-width: 576px){
+
+    /*comment page*/
+    .form-register{
+        width: 50%;
+    }
+
+    .container h1{
+        margin-top: 4em;
+        border: none;
+        padding-bottom: 0;
+    }
+
+    .first_name{
+        margin-top: 0.5em;
+        float: left;
+        width: 40%;
+    }
+    .form-control{
+        margin-bottom: 1em;
+        float: left;
+        width: 60%;
+    }
+    .last_name{
+        clear: both;
+        margin: 0;
+        margin-top: 0.5em;
+        float: left;
+        width: 40%;
+    }
+    .form_comment{
+        float: left;
+        width: 40%;
+        margin: 1em 0;
+    }
+    .form_text_comment{
+        float: left;
+        width: 60%;
+        height: 7em;
+        margin: 1em 0;
+    }
+
+    .send-btn{
+        width: 60%;
+        margin: 10px 40%;
+        margin-bottom: 0;
+    }
+
+    .row{
+        clear: both;
+        margin: 0 15%;
+        padding: 0;
+    }
+
+    .column{
+        width: 30%;
+        margin: 0;
+        padding: 0;
+        margin-left: 1em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .column:first-child{
+        margin-left: 0;
+    }
+
+    .column:last-child{
+        margin-right: 0;
+    }
+
+    
+
+    /* login page*/
+        #email{
+        margin-top: 0.5em;
+        float: left;
+        width: 40%;
+    }
+
+        #password{
+            clear: both;
+            margin: 0;
+            margin-top: 0.5em;
+            float: left;
+            width: 40%; 
+        }
+    /* about us page */
+    .AboutusIntro{
+        width: 70%;
+        margin: 0 auto;
+        font-size: large;
+        margin-bottom: 2em;
+    }
+
+    .suhadetails{
+        float: left;  
+        margin-top: 3em; 
+        width: 60%;
+    }
+
+    .alaadetails{
+        float: right; 
+        margin-top: 3em; 
+        width: 60%;
+    }
+
+    .alaa {
+        padding: 3em 5em;
+
+    }
+
+    .suha {
+        padding: 3em 5em;
+
+    }
+
+
+    /* course page */
+        .course-container h1 {
+            clear: both;
+            text-align: center;
+            color: tomato;
+    }
+
+    .lectures{
+        float: left;
+        width: 25%;
+        margin-left: 5%;
+    }
+    .lecture p{
+        width: 100%;
+        padding: 6em;
+        padding-top: 2em;
+    }
+    iframe{
+        width: 60%;
+        margin-right: 10%;
+        margin-bottom: 3em;
+    }
+
+    /* main-nav index */
+    
+    .nav:last-child{
+        display: none;
+    }
+    .nav{
+        border-top: none;
+    }
+
+    .nav:first-child{
+        border-bottom: 2px solid rgb(255, 74, 42);
+        margin-left: 0;
+    }
+    .nav:first-child:hover{
+        border-bottom: none;
+        margin-left: 0;
+    }
+
+    /* profile  */
+    .profile{
+        width: 120px;
+    }
+
+    .cover{
+        height: 150px;
+    }
+    .edit{
+        width: 20px;
+        margin-left: 14.7em;
+    }
+    .UserName{
+        margin-left: 6em;
+    }
+
+
+    .CoursesLectures li{
+        margin-top: 3em;
+    }
+    
+    .inroll-courses h1 {
+        text-align: center;
+    }
+
+    .course{
+        display: inline-block;
+        width: 30%;
+        margin-left: 2em;
+    }
+
+    /* addcourse page */
+    .candl{
+        clear: both;
+        padding-bottom: 40em;
+    }
+    .CoursesTableSection{
+        float: left;
+        margin: 0 2em;
+        width: 40%;
+    }
+    .UpdateSection{
+        padding: 0;
+        margin: 0;
+        float: left;
+        width: 40%;
+    }
+    .LecturesTableSection{
+        float: left;
+        margin: 0 2em;
+        width: 40%;
+    }
+    .AdmissionSection{
+        padding: 0;
+        margin: 0;
+        float: left;
+        width: 40%;
+    }
+    
+
+}

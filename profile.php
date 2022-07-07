@@ -6,7 +6,7 @@ if (!isset($_SESSION['email'])) {
 ?><?php
 if ($_SESSION['role'] == 1) {?>
     <main class="inroll-courses">
-    <nav class="main-nav" id="navbar">
+    <nav class="main-nav" id="navbar" style="display:none;">
                     <?php
                     if (isset($_SESSION['email'])) {
                                     ?><a href="profile.php" class="nav">Profile</a><?php
@@ -25,7 +25,7 @@ if ($_SESSION['role'] == 1) {?>
                    
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>
-                <?php 
+              <!--  <?php 
         $sql = "SELECT * FROM user WHERE ID = '$_GET[ID]'";
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0 ){
@@ -40,8 +40,10 @@ if ($_SESSION['role'] == 1) {?>
                
                 </section>
     <?php }
-    }?>
-       
+    }?> -->
+       <a href="editprofile.php"><img class="cover" src="cover.png" alt="Profile cover" width="100%" height="120px"/></a>
+    <a href="editprofile.php"><img class="profile" src="profile.jpg" alt="Profile Image" width="40%" height="120px"/></a>
+    <a href="editprofile.php"><img class="edit" src="edit.png" alt="edit Image" width="5%" height="20px"/></a>
     <h1>Inroll Courses</h1>
     
     <section class="row">
@@ -56,7 +58,7 @@ if ($_SESSION['role'] == 1) {?>
                     <img class="CourseImage" src="html.png" alt="<?=$row['CourseName']?>" width="" height="150px"/>
                     <h3 class="CourseName"><a href="course.php?id=<?=$row['id']?>"><?=$row['CourseName']?></a></h3>
                     <p class="CourseDescription"><?= substr($row['Description'],0,50)?></p>
-                    <button  class="Buttons">Enroll Course</button>
+                    
                     <a href="comments.php"><button  class="Buttons" class="Commentbtn">Leave a comment</button></a>
                 </section>
             <?php }

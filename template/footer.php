@@ -1,9 +1,6 @@
 
 <footer>
-        <section class="social-media">
-            <h4>YouTube Channel</h4>
-            <img src="instagram.svg" class="media-icons" alt="Instagram" width="40px"/>      
-        </section>
+        
         
         <section class="SiteMap">
             <h4>Site Map</h4>
@@ -14,9 +11,14 @@
                 <a href="register.php">Register</a>
                 <a href="aboutus.php">About Us </a>
             </ul>
-            
         </section>
 
+        <section class="social-media">
+            <h4>YouTube Channel</h4>
+            <img src="instagram.svg" class="media-icons" alt="Instagram" width="40px"/>      
+        </section>
+
+        
         <section class="contact-us">
             <h4>Contact us</h4>
             <img src="address.svg" class="contact-icons" alt="address" width="20px"/>

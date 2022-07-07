@@ -2,7 +2,7 @@
 
 ?>
 <main class="AboutusPage">
-<nav class="main-nav" id="navbar">
+<nav class="main-nav" id="navbar" style="display:none;>
             <?php
             if (isset($_SESSION['email'])) {
             ?><a href="profile.php" class="nav">Profile</a><?php
@@ -36,7 +36,8 @@
     <section class="CeoDetails">
         <h2 class="AboutusHeading"> Behind the Scenes </h2>
         <section class="alaa">
-            <img src="suha.jpg" height="100px" width="100px" class="Img"/>
+        <img src="suha.jpg" height="200px" width="200px" class="Img"/>
+            <section class="alaadetails">
             <p>CEO & Founder</p>
             <p>Full Stack Web Development</p>
             <p class="email">suhakamal6@gmail.com</p>
@@ -45,19 +46,22 @@
                 <img src="instagram.svg" class="media-icons" alt="Instagram" width="40px"/>
                 <img src="facebook.svg" class="media-icons" alt="Facebook"width="40px"/>
                 <img src="twitter.svg" class="media-icons" alt="Twitter"width="40px"/>
-            </section>   
+            </section>  
+            </section> 
         </section>
 
         <section class="suha">
-            <img src="suha.jpg" height="100px" width="100px" class="Img"/>
-            <p>CEO & Founder</p>
-            <p>Full Stack Web Development</p>
-            <p class="email">suhakamal6@gmail.com</p>
+            <img src="suha.jpg" height="200px" width="200px" class="Img"/>
+            <section class="suhadetails">
+                <p>CEO & Founder</p>
+                <p>Full Stack Web Development</p>
+                <p class="email">suhakamal6@gmail.com</p>
             
             <section class="icons-template">
                 <img src="instagram.svg" class="media-icons" alt="Instagram" width="40px"/>
                 <img src="facebook.svg" class="media-icons" alt="Facebook"width="40px"/>
                 <img src="twitter.svg" class="media-icons" alt="Twitter"width="40px"/>
+            </section>
             </section>
         </section>
     </section>

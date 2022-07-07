@@ -101,6 +101,11 @@
         color: white;
     }
 
+    #Commentbtn:hover{
+        border-color: transparent;
+        background-color: rgba(255, 108, 82, 0.836);
+        color: white;
+    }
     .comment{
         font-size: larger;
     }
@@ -154,25 +159,16 @@
         color: white;
     }
     
-    .main-nav{
-        clear: both;
-        
-    }
     
     .nav{
         padding: 1em 7em;
         text-decoration-line: none;
         color: white;
         margin-right: 1.5em;
-    }
-    .nav:nth-child(even){
-        border-bottom: solid 1px tomato;
-    }
-
-    .nav:last-child{
         border-top: solid 1px tomato;
     }
     .nav:first-child{
+        border:none;
         margin-left: 10%;
     }
     .nav:last-child{
@@ -200,11 +196,13 @@
         background-color: white;
         display: inline-block;
         padding-bottom: 0;
-        margin: 0 5%;
+        margin: 0;
+        width: 100%;
+        padding: 0 20%;
     }
     
     .web-development{
-        padding-top: 4em;
+        padding: 0 4em;
         color: black;
         text-align: center;
     }
@@ -228,14 +226,16 @@
         border: 0.5px solid tomato;
         border-radius: 10px;
         margin-bottom: 1em;
+        margin-left: 15%;
     }
     
     .back-end{
         color: white;
-        float: right;
+        float: left;
         width: 30%;
         border: 0.5px solid tomato;
         border-radius: 10px;
+        margin-left: 15%;
     }
     
     .enrolled-students{
@@ -326,35 +326,44 @@
         width: 100%;
         color: black;
         background-color: white;
-        
         display: inline-block;
+        padding: 0 5%;
     }
     .contact-us{
-        display: inline-block;
-        width: 30%;
+        float: left;
+        width: 20%;
         text-align: center;
-        margin-left: 5%;
-        padding: 1em;
+        
+        padding: 1em 0;
+        padding-top: 2em;
     }
     
     .contact-us img {
         padding-top: 1em;
     }
     .CopyRigths{
+        float: left;
+        text-align: center;
         font-size: small;
-        margin: 1em 1em;
-        margin-bottom: 0;
+        margin: 4em;
+        margin-right: 0;
+        margin-top: 4em;
+        padding: 4em 0;
+        padding-left: 4em;
         color: tomato;
+        width: 20%;
+        border-left: solid black 1px;
     }
 
    
 
     .social-media{
-        float: right;
-        width: 45%;
+        float: left;
+        width: 20%;
         text-align: center;
         margin: 4em auto;  
         border-left: solid black 1px;
+        border-right: solid black 1px;
     }
     
     .social-media h4{
@@ -374,10 +383,19 @@
         padding: 0;
     }
 
+    .SiteMap{
+        width: 20%;
+        float: left;
+        padding: 1em;
+        margin: 0 5%;
+    }
     .SiteMap h4{
+        text-align: center;
+        padding-top: 1em;
         color: tomato;
     }
 
+    
     .media-icons {
         width: 30px;
         cursor: pointer;
@@ -498,13 +516,7 @@
         
     
     }
-    .nav:nth-child(even){
-        border-bottom: solid 1px tomato;
-    }
 
-    .nav:last-child{
-        border-top: solid 1px tomato;
-    }
     .nav a{
         margin: 0;
         padding: 0;
@@ -556,7 +568,8 @@
         padding: 0;
         text-align: center;
         width: 100%;
-        margin: 0;
+        margin: 1em 0;
+        margin-bottom: 0;
     }
 
     .jambotron-head{
@@ -603,12 +616,12 @@
     .courses{
         clear: both;
         padding: 1em;
-        width: 90%;
+        width: 100%;
     }
 
     .web-development{
         text-align: justify;
-        padding-top: 1em;
+        padding: 0 1em;
     }
     
 
@@ -617,13 +630,15 @@
     }
 
     .front-end{
-        width: 100%;
+        width: 90%;
+        margin: 0 5%;
+        margin-bottom: 2em;
     }
 
     .back-end{
-        width: 100%;
+        width: 90%;
+        margin: 0 5%;
         margin-bottom: 2em;
-        
     }
 
     .enrolled-students{
@@ -633,7 +648,7 @@
     }
 
     .row{
-        margin: 0 5%;
+        margin: 2em 5%;
     }
 
     .column{
@@ -642,6 +657,9 @@
         margin-bottom: 2em;
     }
 
+    .row :last-child{
+        margin-bottom: 0;
+    }
     .teacher-photo{
         width: 100%;
         border-radius: 0;
@@ -671,6 +689,7 @@
     .media-icons{
         clear: both;
         margin: 1em;   
+        margin-bottom: 0;
     }
 
     .icons-template{
@@ -702,16 +721,28 @@
         margin: 0;
         border: none;
         margin-bottom: 1em;
-        padding: 0;
+        padding: 2em 0;
         border-bottom: solid 1px black;
     }
 
     .contact-us{
+        padding-top: 0;
         border-bottom: solid 1px black;
     }
 
     .SiteMap{
+        width: 100%;
+        margin:0;
         border-bottom: solid 1px black;
+    }
+
+    .CopyRigths{
+        width: 100%;
+        border: none;
+        margin: 0;
+        text-indent: 0;
+        padding: 3em 0;
+        padding-bottom: 1em;
     }
 
     footer{
@@ -752,7 +783,7 @@
         text-align: center;
         margin: 0.5em;
     }
-
+    
 }
 
 @media only screen and (min-width: 780px){
@@ -772,6 +803,8 @@
     .jambotron-head{
         float: left;
         padding: 2em;
+        font-size: medium;
+       padding-left: 6em;
         width: 50%;
         margin-top: 5em;
     }
@@ -817,8 +850,7 @@
    
 
     .courses{
-        padding: 3em 0;
-
+        padding: 0 10%;
     }
 
     
@@ -828,12 +860,14 @@
 
     .web-development p{
         text-indent: 0;
+        padding: 2em;
+        padding-top: 0;
     }
 
     .teacher-photo{
         width: 100%;
         padding: 0;
-        height: 8em;
+        height: 10em;
     }
 
     .teacher-details{
@@ -841,19 +875,20 @@
         float: none;
         display: block;
         margin: 0;
-        padding: 0;
+        padding: 1em;
         width: 100%;
     }
 
     .row{
-        margin: 2em 5%;
-        margin-top: 1em;
+        margin: 2em 12.5%;
+        
     }
 
     .column{
-        width: 30%;
+        width: 25%;
         padding: 0;
-        margin-right: 2em;
+        margin-bottom: 0;
+        margin-right: 4em;
     }
 
     .teacher-name{
@@ -880,9 +915,8 @@
         padding: 2em;
     }
 
-    .column:last-child{
-        margin-right: 0;
-    } 
+  
+  
 }
 
 
@@ -890,7 +924,6 @@
 #CoursesPage{
     background-color: #eaeff1;
     margin: 0;
-    
     color: white;
     text-align: justify;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

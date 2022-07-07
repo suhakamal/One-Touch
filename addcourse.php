@@ -44,7 +44,7 @@ if(isset($_POST['RemoveButton'])){
 }
 ?>
 <main id="TeacherPage">
-<nav class="main-nav" id="navbar">
+<nav class="main-nav" id="navbar" style="display:none;">
                     <?php
                     if (isset($_SESSION['email'])) {
                                     ?><a href="profile.php" class="nav">Profile</a><?php
@@ -63,6 +63,9 @@ if(isset($_POST['RemoveButton'])){
                    
                     <a onclick="CloseMenu()" class="nav">Close</a>
                 </nav>
+    <section class="candl">       
+            
+    
     <section class="CoursesTableSection">
     <?php if(!empty($message)){ ?>
         <h4 class="message"><?=$message?></h4>
@@ -97,19 +100,19 @@ if(isset($_POST['RemoveButton'])){
     <h2 class="CourseTableHeading">Update Section</h2>
     <form action="" method="POST">
                         <div class="form-group">
-                            <label for="ID">ID</label>
+                            <label for="ID" class="first_name">ID</label>
                             <input type="text" name="ID" id="ID" class="form-control" placeholder="Only Require On Update and Remove"  />
                         </div>
                         <div class="form-group">
-                            <label for="CourseName">Course Name</label>
+                            <label for="CourseName" class="first_name">Course Name</label>
                             <input type="text" name="CourseName" id="CourseName"  class="form-control" placeholder="Enter Course Name" required />
                         </div>
                         <div class="form-group">
-                            <label for="Description">Description</label>
+                            <label for="Description" class="first_name">Description</label>
                             <input type="text" name="Description" id="Description"   class="form-control" placeholder="Description" required  />
                         </div>
                         <div class="form-group">
-                            <label for="Category">Category</label>
+                            <label for="Category" class="first_name">Category</label>
                             <input type="text" name="Category" id="Category"   class="form-control" placeholder="Category"  required />
                         </div>
                         <div class="form-group">
@@ -120,6 +123,7 @@ if(isset($_POST['RemoveButton'])){
                         </div>
                         
                     </form>
-    <section>
+        </section>
+        </section>
     </main>
     <?php require 'template/footer.php' ?>

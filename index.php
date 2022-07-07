@@ -29,7 +29,7 @@ if (!isset($_SESSION['email'])) {
                     }?>
                     
                     <a href="comments.php"><button  class="Buttons" id="Commentbtn">Leave a comment</button></a>
-                    <button class="login-btn">Login</button>
+                    <!--<button class="login-btn">Login</button> -->
                 </section>
         </section>
             
@@ -67,7 +67,7 @@ if (!isset($_SESSION['email'])) {
                         culpa
                         excepturi blanditiis. 
                     </p>
-                    <br>
+                    
                 </article>
                 <article class="front-end">
                     <h2 class="course-head"> Front End </h2>
@@ -97,7 +97,7 @@ if (!isset($_SESSION['email'])) {
                     </div>
                 </article>
             </section>
-            <br><br><br><br>
+            
             <section class="row">
                 <article class="column">
                     <img src="102.jpg" alt="teacher photo" class="teacher-photo" width="" />

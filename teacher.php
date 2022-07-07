@@ -6,7 +6,7 @@ if (!isset($_SESSION['email'])) {
 
 ?>
 <main id="TeacherPage">
-<nav class="main-nav" id="navbar">
+<nav class="main-nav" id="navbar" style="display:none;">
                     <?php
                     if (isset($_SESSION['email'])) {
                                     ?><a href="profile.php" class="nav">Profile</a><?php

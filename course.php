@@ -46,7 +46,7 @@ if(isset($_POST['RemoveButton'])){
 ?>
 <main id="CoursePage">
     <article>
-        <nav class="main-nav" id="navbar">
+    <nav class="main-nav" id="navbar" style="display:none;">
             <?php
             if (isset($_SESSION['email'])) {
             ?><a href="profile.php" class="nav">Profile</a><?php
@@ -84,7 +84,7 @@ if(isset($_POST['RemoveButton'])){
                             <a href="course.php?ID=<?=$_GET['ID']?>&url=<?= $row['URL'] ?>&course=<?= $_GET['course'] ?>"><?= $row['LectureName'] ?></a>
                     <?php }
                     } else {
-                        echo "There is no lectures available for this course  ";
+                        $message="There is no Lectures Available for this course "?> <h4 style="text-align:center;"><?=$message?></h4><?php
                     }
                     ?>
                 </nav>
@@ -98,6 +98,7 @@ if(isset($_POST['RemoveButton'])){
                     <?php } ?>
             </section>
             <?php if ($_SESSION['role'] == 2) {?>
+                <section class="candl">
                 <section class="LecturesTableSection">
                 
                 
@@ -121,20 +122,21 @@ if(isset($_POST['RemoveButton'])){
            
             <?php } }?>
              </table>
+             </section>
                 <section class="AdmissionSection">
                     <h2 class="LecturesTableHeading">Update Section</h2>
                     <form action="" method="POST">
                         <div class="form-group">
-                            <label for="ID">ID</label>
+                            <label for="ID" class="first_name">ID</label>
                             <input type="text" name="ID" id="ID" class="form-control" placeholder="Only Require On Update and Remove"  />
                         </div>
                         <div class="form-group">
-                            <label for="LectureName">Lecture Name</label>
+                            <label for="LectureName" class="first_name">Lecture Name</label>
                             <input type="text" name="LectureName" id="LectureName"  class="form-control" placeholder="Enter Lecture Name" required />
                         </div>
                         <div class="form-group">
-                            <label for="URL">URL</label>
-                            <input type="text" name="URL" id="URL"   class="form-control" placeholder="URL" required  />
+                            <label for="URL" class="first_name">URL</label>
+                            <input type="text" name="URL" id="URL"    class="form-control" placeholder="URL" required  />
                         </div>
                         <div class="form-group">
                             <button type="submit" name="AddButton" id="send" value="Add" class="send-btn">Add</button>
@@ -144,8 +146,9 @@ if(isset($_POST['RemoveButton'])){
                         </div>
                     </form>
                 </section>
+            </section>
             <?php }?>
-        </section>
+        
     </article>
 </main>
 <?php require 'template/footer.php';

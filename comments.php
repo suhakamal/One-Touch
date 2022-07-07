@@ -53,7 +53,7 @@ if (isset($_POST) && isset($_POST['send'])) {
 ?>
 
 <main>
-    <nav class="main-nav" id="navbar">
+<nav class="main-nav" id="navbar" style="display:none;">
         <?php
         if (isset($_SESSION['email'])) {
         ?><a href="profile.php" class="nav">Profile</a><?php
@@ -78,18 +78,18 @@ if (isset($_POST) && isset($_POST['send'])) {
         <div class="form-register">
             <form action="" method="POST">
                 <div class="form-group">
-                    <label for="first_name">First Name</label>
+                    <label for="first_name" class="first_name">First Name</label>
                     <input type="text" name="first_name" id="first_name" value="<?= $first_name ?>" class="form-control" placeholder="Enter First Name" />
                 </div>
                 <span><?= $first_name_err; ?></span>
                 <div class="form-group">
-                    <label for="last_name">Last Name</label>
+                    <label for="last_name" class="last_name">Last Name</label>
                     <input type="text" name="last_name" id="last_name" value="<?= $last_name ?>" class="form-control" placeholder="Enter Last Name" />
                 </div>
                 <span><?= $last_name_err; ?></span>
                 <div class="form-group">
-                    <label for="comment">comment</label>
-                    <textarea id="comment" name="comment" cols="30" rows="100"></textarea>
+                    <label for="comment" class="form_comment">comment</label>
+                    <textarea id="comment" class="form_text_comment" name="comment" cols="30" rows="100"></textarea>
                 </div>
                 <span><?= $comment_err; ?></span>
                 <div class="form-group">

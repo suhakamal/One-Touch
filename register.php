@@ -79,7 +79,7 @@ if (isset($_POST) && isset($_POST['send'])) {
 ?>
 
         <main>
-        <nav class="main-nav" id="navbar">
+        <nav class="main-nav" id="navbar" style="display:none;">
         <?php
         if (isset($_SESSION['email'])) {
         ?><a href="profile.php" class="nav">Profile</a><?php
@@ -106,27 +106,27 @@ if (isset($_POST) && isset($_POST['send'])) {
                 <div class="form-register">
                     <form action="" method="POST">
                         <div class="form-group">
-                            <label for="first_name">First Name</label>
+                            <label for="first_name" class="first_name">First Name</label>
                             <input type="text" name="first_name" id="first_name" value="<?= $first_name ?>" class="form-control" placeholder="Enter First Name" />
                         </div>
                         <span><?= $first_name_err; ?></span>
                         <div class="form-group">
-                            <label for="last_name">Last Name</label>
+                            <label for="last_name" class="last_name">Last Name</label>
                             <input type="text" name="last_name" id="last_name" value="<?= $last_name ?>" class="form-control" placeholder="Enter Last Name" />
                         </div>
                         <span><?= $last_name_err; ?></span>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" value="<?= $email ?>" class="form-control" placeholder="Enter Email" />
+                            <label for="email" id="email">Email</label>
+                            <input type="text" name="email"  value="<?= $email ?>" class="form-control" placeholder="Enter Email" />
                         </div>
                         <span><?= $email_err; ?></span>
                         <div class="form-group">
-                            <label for="Password">Password</label>
-                            <input type="password" name="password" id="password" value="" class="form-control" placeholder="Enter Password" />
+                            <label for="Password" id="password">Password</label>
+                            <input type="password" name="password"  value="" class="form-control" placeholder="Enter Password" />
                         </div>
                         <span><?= $password_err; ?></span>
                         <div class="form-group">
-                            <label for="repeat-Pwd">Confirm Password</label>
+                            <label for="repeat-Pwd" id="password">Confirm Password</label>
                             <input type="password" name="repeat-Pwd" id="repeat-Pwd" value="" class="form-control" placeholder="Repeat Password" />
                         </div>
                         <span><?= $repeat_Pwd_err; ?></span>

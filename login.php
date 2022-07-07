@@ -77,7 +77,7 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['role'])) {
 
     
         <main>
-        <nav class="main-nav" id="navbar">
+        <nav class="main-nav" id="navbar" style="display:none;>
         <?php
         if (isset($_SESSION['email'])) {
         ?><a href="profile.php" class="nav">Profile</a><?php
@@ -109,13 +109,13 @@ if (!isset($_SESSION['email']) && !isset($_SESSION['role'])) {
                 <span><?=$success; ?></span><span><?=$fail; ?></span>
                     <form action="" method="POST">
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" value="<?=$email?>" class="form-control" placeholder="Enter Email"  />
+                            <label for="email" id="email">Email</label>
+                            <input type="text" name="email"  value="<?=$email?>" class="form-control" placeholder="Enter Email"  />
                         </div>
                         <span><?= $email_err; ?></span>
                         <div class="form-group">
-                            <label for="Password">Password</label>
-                            <input type="password" name="password" id="password" value="" class="form-control" placeholder="Enter Password"  />
+                            <label for="Password" id="password" >Password</label>
+                            <input type="password" name="password" value="" class="form-control" placeholder="Enter Password"  />
                         </div>
                         <span><?= $password_err; ?></span>
                         <div class="form-group">
